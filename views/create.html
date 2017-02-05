@@ -1,0 +1,50 @@
+<ion-view view-title="Create a Listing" hide-back-button="true" class="bg bg-light">
+    <ion-content>
+        <div class="list card">
+            <div class="item item-body text-centered">
+                Create a listing on Nyumbani for your property by filling in this form and adding at least one photosphere!
+            </div>
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Title</span>
+                    <input type="text" placeholder="A title for your listing">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Description</span>
+                    <textarea placeholder="A detailed description of your property"></textarea>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Address</span>
+                    <input type="text" placeholder="Street name, address, apt # if applicable">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Price</span>
+                    <input type="text" placeholder="Monthly rent or sale price">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Price</span>
+                    <input type="text" placeholder="Monthly rent or sale price">
+                </label>
+            </div>
+            <div class="item item-divider">
+                <a href="intent://scan/#Intent;scheme=zxing;package=com.google.vr.cyclops;end"
+                    class="button button-energized button-bar"><i class="icon ion-camera"></i>&nbsp;&nbsp;Add photosphere</a>
+            </div>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Bathrooms</span>
+                <input type="text" placeholder="# of bathrooms">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Bedrooms</span>
+                <input type="text" placeholder="# of bedrooms">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Other info</span>
+                <textarea placeholder="Anything else you want to add"></textarea>
+            </label>
+            <div class="item item-divider">
+                <button class="button button-energized button-bar"><i class="icon ion-plus"></i>&nbsp;&nbsp;Submit your listing</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

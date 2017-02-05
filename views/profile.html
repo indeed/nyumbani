@@ -1,0 +1,23 @@
+<ion-view hide-back-button="true" view-title="" nav-bar-class="bar-calm" ng-style="{'background-color': 'rgb('+dominantColor[0]+', '+dominantColor[1]+', '+dominantColor[2]+')'}"
+    class="bg bg-poly-translucent">
+    <ion-list class="profile-header">
+        <ion-item class="item-image profile">
+            <img id="profileImage" crossorigin="Anonymous" ng-src="{{profile.auth.profileImageURL?profile.auth.profileImageURL:'../img/user-default.jpg'}}"
+                imageonload="setColor(profile.auth.profileImageURL?profile.auth.profileImageURL:'../img/user-default.jpg')">
+        </ion-item>
+        <h1 class="item item-calm">
+            {{profile.auth.displayName?profile.auth.displayName:'Anonymous User'}}
+            <span class="item item-calm"><i class="icon ion-android-pin"></i>&nbsp;&nbsp;Toronto, Canada</span>
+        </h1>
+    </ion-list>
+
+    <div ng-hide="profile.auth" class="list card">
+        <div class="item item-body">
+            You are currently not logged in. Please sign in in order to create listings and communicate with other users!
+        </div>
+        <div class="item item-divider">
+            <button ng-click="authModal.show()" class="button button-energized button-bar"><i class="icon ion-log-in"></i>&nbsp;&nbsp;Okay, take me to the login page!</button>
+        </div>
+    </div>
+
+</ion-view>

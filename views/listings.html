@@ -1,0 +1,78 @@
+<ion-view view-title="View Listings" class="bg bg-light">
+    <ion-content data-tap-disabled="true">
+        <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search" ng-model="listingSearch">
+            </label>
+        </div>
+        <div ng-repeat="listing in listings | filter: listingSearch" class="list card" ng-click="showRequest(listing)">
+            <div class="item">
+                <h2 class="energized">{{listing.name}}</h2>
+            </div>
+            <div class="item item-image">
+                <img src="{{listing.img}}">
+            </div>
+            <div class="item item-body">
+                {{listing.desc | cut:true:120:' ...'}}
+            </div>
+            <div class="item item-divider">
+                <p>
+                    <span class="energized">{{listing.price}}</span> &nbsp;|&nbsp;
+                    <span>{{listing.location}}</span>
+                    <span class="float-right">{{listing.date}}</span>
+                </p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+
+<!-- REQUEST -->
+<script id="listingModal.html" type="text/ng-template">
+    <div class="modal item-stable" ng-controller="listingModalCtrl">
+        <ion-header-bar class="bar bar-header bar-energized">
+            <span class="left-buttons">
+                <button ripple ripple-dark class="button button-clear button-icon ion-android-arrow-back" ng-click="hideModal()"><i class="icon"></i></button>
+            </span>
+            <h1 class="title">{{listing.name}}</h1>
+        </ion-header-bar>
+        <ion-content class="bg bg-light"> 
+            
+            
+            <div class="list card">
+                <div class="item item-image">
+                    <div id="vrview"></div>
+                </div>
+                <div class="item item-body">
+                    <strong>{{listing.name}} - </strong>
+                    {{listing.desc}}
+                </div>
+                <div class="item">
+                    <p>
+                        <span>Date Listed</span>
+                        <span class="float-right">{{listing.date}}</span>
+                    </p>
+                    <p>
+                        <span>Price</span>
+                        <span class="float-right">{{listing.price}}</span>
+                    </p>
+                    <p>
+                        <span>Address</span>
+                        <span class="float-right">{{listing.address}}, {{listing.location}}</span>
+                    </p>
+                    <p>
+                        <span>Bathrooms</span>
+                        <span class="float-right">{{listing.baths}}</span>
+                    </p>
+                    <p>
+                        <span>Bedrooms</span>
+                        <span class="float-right">{{listing.beds}}</span>
+                    </p>
+                </div>
+                <ui-gmap-google-map options='{mapTypeControl: false, minZoom: 7, streetViewControl: false}' center="map.center" zoom="map.zoom" draggable="true" options="options">
+                    <ui-gmap-marker coords="marker.coords" idkey="marker.id" options="marker.options">
+                    </ui-gmap-marker>
+                </ui-gmap-google-map>
+            </div>
+        </div>
+</script>
