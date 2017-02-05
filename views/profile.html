@@ -2,8 +2,8 @@
     class="bg bg-poly-translucent">
     <ion-list class="profile-header">
         <ion-item class="item-image profile">
-            <img id="profileImage" crossorigin="Anonymous" ng-src="{{profile.auth.profileImageURL?profile.auth.profileImageURL:'../img/user-default.jpg'}}"
-                imageonload="setColor(profile.auth.profileImageURL?profile.auth.profileImageURL:'../img/user-default.jpg')">
+            <img id="profileImage" crossorigin="Anonymous" ng-src="{{profile.auth.profileImageURL?profile.auth.profileImageURL:'img/user-default.jpg'}}"
+                imageonload="setColor(profile.auth.profileImageURL?profile.auth.profileImageURL:'img/user-default.jpg')">
         </ion-item>
         <h1 class="item item-calm">
             {{profile.auth.displayName?profile.auth.displayName:'Anonymous User'}}

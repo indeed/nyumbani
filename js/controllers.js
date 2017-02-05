@@ -32,7 +32,7 @@ app.controller('menuCtrl', function ($scope, $ionicHistory, $localStorage, $ioni
             $scope.authModal.hide();
         } else {
             $scope.$storage.user = {
-                profileImageURL: "../img/user-default.jpg",
+                profileImageURL: "img/user-default.jpg",
                 displayName: "Anonymous User",
                 uid: null
             }
@@ -128,25 +128,25 @@ app.controller('messagesCtrl', function ($scope) {
             name: "Tobi Adewoye",
             time: "5:21 PM",
             content: "Is 2:00pm on Saturday a good time?",
-            img: "../img/data/msg_tobi.jpg"
+            img: "img/data/msg_tobi.jpg"
         },
         {
             name: "Danilla Xing",
             time: "3:05 PM",
             content: "Okay, sounds good. Thanks for your time! See you in a few days.",
-            img: "../img/data/msg_danilla.jpg"
+            img: "img/data/msg_danilla.jpg"
         },
         {
             name: "Michael Dempsey",
             time: "Tue",
             content: "Sorry, I've found another place that is closer to work.",
-            img: "../img/data/msg_dempsey.jpg"
+            img: "img/data/msg_dempsey.jpg"
         },
         {
             name: "Barack Obama",
             time: "Jan 30",
             content: "Hey Mr. President!",
-            img: "../img/data/msg_obama.jpg"
+            img: "img/data/msg_obama.jpg"
         },
     ]
 });

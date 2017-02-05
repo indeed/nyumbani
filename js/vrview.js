@@ -4,7 +4,7 @@ var app = angular.module('nyumbani.vrview', []);
 app.controller('listingModalCtrl', function ($scope, $timeout) {
     var vrView;
     $scope.map = { zoom: 13 };
-    $scope.options = {icon:'../img/ionic.png'};
+    $scope.options = {icon:'img/ionic.png'};
     var vrLoaded = false;
     $scope.hideModal = function () {
         $scope.listingModal.hide();
