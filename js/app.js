@@ -18,14 +18,13 @@ var app = angular.module('nyumbani', ['ionic',
     'nyumbani.filters',
     'nyumbani.vrview'
 ])
-    .constant('FirebaseUrl', 'https://rsynyumbani.firebaseio.com/')
+    .constant('FirebaseUrl', 'https://rsykarma.firebaseio.com/')
     .service('rootRef', ['FirebaseUrl', Firebase]);
 
 app.run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
+        screen.orientation.lock("portrait");
     })
-
-
 });
 
 app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider, $compileProvider, $colorThiefProvider, uiGmapGoogleMapApiProvider) {

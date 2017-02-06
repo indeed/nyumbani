@@ -32,7 +32,13 @@ app.controller('listingModalCtrl', function ($scope, $timeout) {
         if (!vrLoaded) {
             onVrViewLoad();
             vrLoaded = true;
+        } else {
+            vrView.setContent({
+                image: $scope.listing.vr,
+                is_stereo: $scope.listing.stereo
+            });
         }
+
         $scope.marker = JSON.parse(JSON.stringify($scope.listing.marker));
         $scope.map.center = JSON.parse(JSON.stringify($scope.marker.coords));
         $scope.marker.options = {
