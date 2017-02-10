@@ -125,25 +125,25 @@ app.controller('messagesCtrl', function ($scope) {
     console.log("ok");
     $scope.messages = [
         {
-            name: "Tobi Adewoye",
+            name: "Oluwatobi",
             time: "5:21 PM",
             content: "Is 2:00pm on Saturday a good time?",
             img: "img/data/msg_tobi.jpg"
         },
         {
-            name: "Danilla Xing",
+            name: "Danilla",
             time: "3:05 PM",
             content: "Okay, sounds good. Thanks for your time! See you in a few days.",
             img: "img/data/msg_danilla.jpg"
         },
         {
-            name: "Michael Dempsey",
+            name: "Michael",
             time: "Tue",
             content: "Sorry, I've found another place that is closer to work.",
             img: "img/data/msg_dempsey.jpg"
         },
         {
-            name: "Barack Obama",
+            name: "Barack",
             time: "Jan 30",
             content: "Hey Mr. President!",
             img: "img/data/msg_obama.jpg"
